@@ -1,0 +1,81 @@
+body {
+    font-family: 'Nanum Pen Script', cursive;
+    background: #e9dfc7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.notebook {
+    width: 380px;
+    min-height: 600px;
+    background: #faf2dc;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    background-image:
+        linear-gradient(90deg, rgba(160,120,80,0.2) 1px, transparent 1px),
+        linear-gradient(#ece2c8 1px, transparent 1px);
+    background-size: 4px 4px, 100% 30px;
+    border: 2px solid #c9b89a;
+}
+
+.title {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #3d2a1a;
+}
+
+.feather {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+.todo-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #c9b89a;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    background: rgba(255,255,255,0.8);
+    color: #3d2a1a;
+}
+
+.todo-input:focus {
+    outline: 2px solid #b48b5f;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    font-size: 24px;
+    padding: 8px 5px;
+    border-bottom: 1px dashed #bcae92;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3d2a1a;
+}
+
+.remove-btn {
+    cursor: pointer;
+    font-size: 18px;
+    color: #a44;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.remove-btn:hover {
+    color: #7a1f1f;
+}

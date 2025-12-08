@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학이의 할일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="notebook">
+        <div class="title">
+            <span>학이의 할일</span>
+            <svg class="feather" viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 20l5.09-5.09"></path>
+                <path d="M14.17 14.17l-5.09 5.09"></path>
+                <path d="M2 22l10-10"></path>
+                <path d="M22 2s-4.5-.5-10 5L6 13l5 5 6-6c5.5-5.5 5-10 5-10z"></path>
+            </svg>
+        </div>
+
+        <input class="todo-input" id="todoInput" placeholder="할 일을 입력하세요..." aria-label="할 일 입력" />
+
+        <ul class="todo-list" id="todoList"></ul>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
