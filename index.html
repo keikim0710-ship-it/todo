@@ -3,27 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학이의 할일</title>
+    <title>나의 할일</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="notebook">
-        <div class="title">
-            <span>학이의 할일</span>
-            <svg class="feather" viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 20l5.09-5.09"></path>
-                <path d="M14.17 14.17l-5.09 5.09"></path>
-                <path d="M2 22l10-10"></path>
-                <path d="M22 2s-4.5-.5-10 5L6 13l5 5 6-6c5.5-5.5 5-10 5-10z"></path>
-            </svg>
-        </div>
+    <div class="app">
+        <header class="hero">
+            <div class="hero__text">
+                <p class="eyebrow">오늘 해야 할 일</p>
+                <h1>나의 할일</h1>
+                <p class="hero__subtitle">완료하면 선으로 체크되고, 필요하면 삭제하세요.</p>
+            </div>
+            <div class="hero__badge">Focus</div>
+        </header>
 
-        <input class="todo-input" id="todoInput" placeholder="할 일을 입력하세요..." aria-label="할 일 입력" />
+        <main class="content">
+            <section class="card">
+                <div class="card__header">
+                    <div>
+                        <h2>새 할일 추가</h2>
+                        <p class="card__subtitle">짧고 명확하게 적어 보세요.</p>
+                    </div>
+                    <div class="count">
+                        <span id="todoCount">0</span> tasks
+                    </div>
+                </div>
+                <form id="todoForm" class="form">
+                    <label class="form__field form__field--full">
+                        <span>할일</span>
+                        <div class="input-wrap">
+                            <input type="text" id="todoInput" placeholder="예: 오전 11시 회의 준비" autocomplete="off" required />
+                            <button type="submit" class="primary-btn">추가</button>
+                        </div>
+                    </label>
+                </form>
+            </section>
 
-        <ul class="todo-list" id="todoList"></ul>
+            <section class="card">
+                <div class="card__header">
+                    <h2>할일 목록</h2>
+                    <p class="card__subtitle" id="statusLabel">아직 할일이 없습니다.</p>
+                </div>
+                <div id="todoList" class="todo-list" aria-live="polite"></div>
+            </section>
+        </main>
     </div>
 
     <script src="app.js" defer></script>
